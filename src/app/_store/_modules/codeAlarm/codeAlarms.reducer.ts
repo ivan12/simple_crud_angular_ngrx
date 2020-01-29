@@ -1,6 +1,6 @@
 import { createReducer, on, Action } from '@ngrx/store'
-import {CodeAlarmAction} from "./codeAlarm.action";
-import {CodeAlarmState} from "../../codeAlarm.module";
+import { CodeAlarmAction } from "./codeAlarm.action";
+import { CodeAlarmState } from "../../codeAlarm.module";
 
 export namespace CodeAlarmsReducer {
     let codeAlarms: CodeAlarmState[] = [];
@@ -9,12 +9,11 @@ export namespace CodeAlarmsReducer {
 
     const _addCodeAlarm = (state: any, action: Action) => ({ ...state, codeAlarms: state.codeAlarms.concat(action['payload']) });
 
-    const _setCodeAlarm = (state: any, action: Action) => ({ ...state, codeAlarms: editElemListCodeAlarms(...action['payload'], action['index'], action['codeAlarm'])});
+    const _setCodeAlarm = (state: any, action: Action) => ({ ...state, codeAlarm: action['payload']});
 
     const _removeCodeAlarm = (state: any, action: Action) => ({ ...state, codeAlarms: state.codeAlarms.filter(myProduct => myProduct != action['payload'])});
 
     const _setCodeAlarms = (state: any, action: Action) => ({ ...state, codeAlarms: action['payload']});
-
 
     function editElemListCodeAlarms(listCodeAlarms, index, codeAlarm) {
         listCodeAlarms[index] = codeAlarm;

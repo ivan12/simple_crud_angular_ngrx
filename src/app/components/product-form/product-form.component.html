@@ -7,25 +7,25 @@
             <ion-item href="#" class="bg-color-red eye-disable" (click)="clearEdit()">
               <ion-icon name="eye-off" slot="start"></ion-icon>
             </ion-item>
-            <ion-card-title class="title-vinho">Editar Vinho</ion-card-title>
+            <ion-card-title class="title-vinho">Editar Conteúdo do Código</ion-card-title>
           </ion-card-header>
 
           <ion-card-content>
             <ion-grid>
               <ion-row>
+                <ion-col size="4">
+                  <ion-label>Código:</ion-label>
+                  <ion-input class="form-control bgImput" formControlName="codigo" placeholder="Digite o codigo"></ion-input>
+                </ion-col>
                 <ion-col size="8">
                   <ion-label>Nome:</ion-label>
-                  <ion-input class="form-control bgImput" formControlName="nome" placeholder="Digite o nome do vinho"></ion-input>
-                </ion-col>
-                <ion-col size="4">
-                  <ion-label>Preço:</ion-label>
-                  <ion-input class="form-control bgImput" formControlName="preco" placeholder="Digite o preco do vinho"></ion-input>
+                  <ion-input class="form-control bgImput" formControlName="nome" placeholder="Digite o nome relacionado ao código"></ion-input>
                 </ion-col>
               </ion-row>
               <ion-row>
                 <ion-col size="12">
                   <ion-label>Descrição:</ion-label>
-                  <ion-textarea class="form-control bgImput" formControlName="descricao" placeholder="Digite a descrição do vinho"></ion-textarea>
+                  <ion-textarea class="form-control bgImput" formControlName="descricao" placeholder="Digite a descrição relacionado ao codigo"></ion-textarea>
                 </ion-col>
               </ion-row>
             </ion-grid>

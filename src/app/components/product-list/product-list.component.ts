@@ -47,8 +47,8 @@ export class ProductListComponent implements OnInit {
     }
   }
 
-  loadEdit(list: CodeAlarmState[], index: number, product: any) {
-    this.store.dispatch(CodeAlarmAction.edit({payload: list, index: index, codeAlarm: product}));
+  loadEdit(product: any) {
+    this.store.dispatch(CodeAlarmAction.edit({payload: product}));
   }
 
   pesquisar(value) {

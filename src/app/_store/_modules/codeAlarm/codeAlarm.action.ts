@@ -1,5 +1,4 @@
 import {createAction, props} from '@ngrx/store';
-import {CodeAlarmState} from "../../codeAlarm.module";
 
 export namespace CodeAlarmAction {
     export enum ActionTypes {
@@ -41,10 +40,9 @@ export namespace CodeAlarmAction {
     export const reduceQuantidadeCarrinhoProduct  = createAction(ActionTypes.REDUCE_QUANTIDADE_CARRINHO, props<{ payload : any, index: any }>());
 
 
-
     export const setProducts  = createAction(ActionTypes.SET_PRODUCTS, props<{ payload : any }>());
 
-    export const edit  = createAction(ActionTypes.EDIT, props<{ payload : any, index: number, codeAlarm: CodeAlarmState }>());
+    export const edit  = createAction(ActionTypes.EDIT, props<{ payload : any }>());
 
     export const clearEdit  = createAction(ActionTypes.CLEAR_EDIT, props<{ payload : any }>());
 

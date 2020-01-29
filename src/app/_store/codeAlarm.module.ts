@@ -16,10 +16,12 @@ export interface CodeAlarmState {
 
 export interface TryState {
     codeAlarms: CodeAlarmState[]
+    codeAlarm: CodeAlarmState
 }
 
 export const reducers: ActionReducerMap<TryState> = {
-    codeAlarms: CodeAlarmsReducer.reducer
+    codeAlarms: CodeAlarmsReducer.reducer,
+    codeAlarm: CodeAlarmsReducer.reducer
 };
 
 export const metaReducers: MetaReducer<TryState>[] = !environment.production ? [] : [];
